@@ -9,14 +9,14 @@ import sqlite_icon from "../assets/sqlite.png";
 import mariadb_icon from "../assets/mariadb.png";
 import oraclesql_icon from "../assets/oraclesql.png";
 import sql_server_icon from "../assets/sql-server.png";
-import discord from "../assets/discord.png";
-import github from "../assets/github.png";
+// import discord from "../assets/discord.png";
+// import github from "../assets/github.png";
 import warp from "../assets/warp.png";
 import screenshot from "../assets/screenshot.png";
 import FadeIn from "../animations/FadeIn";
-import axios from "axios";
+// import axios from "axios";
 import { languages } from "../i18n/i18n";
-import { Tweet } from "react-tweet";
+// import { Tweet } from "react-tweet";
 import { socials } from "../data/socials";
 
 function shortenNumber(number) {
@@ -27,20 +27,21 @@ function shortenNumber(number) {
 }
 
 export default function LandingPage() {
-  const [stats, setStats] = useState({ stars: 18000, forks: 1200 });
+  // const [stats, setStats] = useState({ stars: 34634, forks: 2637 });
+  const [stats] = useState({ stars: 34634, forks: 2637 });
 
   useEffect(() => {
-    const fetchStats = async () => {
-      await axios
-        .get("https://api.github-star-counter.workers.dev/user/drawdb-io")
-        .then((res) => setStats(res.data));
-    };
+    // const fetchStats = async () => {
+    //   await axios
+    //     .get("https://api.github-star-counter.workers.dev/user/drawdb-io")
+    //     .then((res) => setStats(res.data));
+    // };
 
     document.body.setAttribute("theme-mode", "light");
     document.title =
-      "drawDB | Online database diagram editor and SQL generator";
+      "drawDB | 在线数据库图表编辑器和 SQL 生成器";
 
-    fetchStats();
+    // fetchStats();
   }, []);
 
   return (
@@ -62,19 +63,18 @@ export default function LandingPage() {
             <FadeIn duration={0.75}>
               <div className="md:px-3">
                 <h1 className="text-[42px] md:text-3xl font-bold tracking-wide bg-linear-to-r from-sky-900 from-10% via-slate-500 to-[#12495e] inline-block text-transparent bg-clip-text">
-                  Draw, Copy, and Paste
+                  drawDB 中文版
                 </h1>
                 <div className="text-lg font-medium mt-1 sliding-vertical">
-                  Free and open source, simple, and intuitive database design
-                  editor, data-modeler, and SQL generator.{" "}
+                  免费、开源、简单、直观的数据库设计编辑器、数据建模器和 SQL 生成器。{" "}
                   <span className="ms-2 sm:block sm:ms-0 text-slate-500 bg-white font-bold whitespace-nowrap">
-                    No sign up
+                    无需注册
                   </span>
                   <span className="ms-2 sm:block sm:ms-0 text-slate-500 bg-white font-bold whitespace-nowrap">
-                    Free of charge
+                    免费使用
                   </span>
                   <span className="ms-2 sm:block sm:ms-0 text-slate-500 bg-white font-bold whitespace-nowrap">
-                    Quick and easy
+                    简单快速
                   </span>
                 </div>
               </div>
@@ -88,13 +88,13 @@ export default function LandingPage() {
                     .scrollIntoView({ behavior: "smooth" })
                 }
               >
-                Learn more
+                了解更多
               </button>
               <Link
                 to="/editor"
                 className="inline-block py-3 text-white transition-all duration-300 rounded-full shadow-lg bg-sky-900 ps-7 pe-6 hover:bg-sky-800"
               >
-                Try it for yourself <i className="bi bi-arrow-right ms-1"></i>
+                开始使用 <i className="bi bi-arrow-right ms-1"></i>
               </Link>
             </div>
           </div>
@@ -129,8 +129,7 @@ export default function LandingPage() {
           </div>
           <div className="mt-16 w-[75%] text-center sm:w-full mx-auto shadow-xs rounded-2xl border p-6 bg-white space-y-3 mb-12">
             <div className="text-lg font-medium">
-              Build diagrams with a few clicks, see the full picture, export SQL
-              scripts, customize your editor, and more.
+              只需单击几下即可构建图表、查看全图、导出 SQL 脚本、自定义编辑器等。
             </div>
             <img src={screenshot} className="mx-auto" />
           </div>
@@ -216,6 +215,7 @@ export default function LandingPage() {
       </div>
 
       {/* Tweets */}
+      {/* 
       <div className="px-40 mt-6 md:px-8">
         <div className="text-center text-2xl md:text-xl font-medium">
           What the internet says about us
@@ -230,8 +230,10 @@ export default function LandingPage() {
           <Tweet id="1776842268042756248" />
         </div>
       </div>
+      */}
 
       {/* Contact us */}
+      {/*
       <svg
         viewBox="0 0 1440 54"
         fill="none"
@@ -294,6 +296,7 @@ export default function LandingPage() {
           </div>
         </div>
       </div>
+      */}
 
       <div className="bg-red-700 py-1 text-center text-white text-xs font-semibold px-3">
         Attention! The diagrams are saved in your browser. Before clearing the

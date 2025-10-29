@@ -24,25 +24,25 @@ export default function Navbar() {
                   .scrollIntoView({ behavior: "smooth" })
               }
             >
-              Features
+              功能
             </Link>
             <Link
               to="/editor"
               className="text-lg font-semibold hover:text-sky-800 transition-colors duration-300"
             >
-              Editor
+              编辑器
             </Link>
             <Link
               to="/templates"
               className="text-lg font-semibold hover:text-sky-800 transition-colors duration-300"
             >
-              Templates
+              模板
             </Link>
             <Link
               to={socials.docs}
               className="text-lg font-semibold hover:text-sky-800 transition-colors duration-300"
             >
-              Docs
+              文档
             </Link>
           </div>
           <div className="md:hidden block space-x-3 ms-12">
